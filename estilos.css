@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color: var(--bgbody);
+    background-color: var(--bgbody) !important;
 
 }
 
@@ -96,4 +96,13 @@ header{
 
     .button-container {
         text-align: center;
+    }
+
+    .carousel-container {
+        max-height: 80% !important;
+    }
+
+    .carousel-item img {
+        width: 415px;
+        height: 500px;
     }
