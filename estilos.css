@@ -1,9 +1,15 @@
+:root {
+    --bgheader: #28a55c;
+    --bgbody: #d4ecb9;
+}
+
 body{
-    background-color:white;
+    background-color: var(--bgbody);
 
 }
+
 header{
-    background-color:#2ECC71 ;
+    background-color: var(--bgheader);
     width: 100%;
     height: 50px;
     padding-left:30px;
@@ -16,9 +22,11 @@ header{
 #menu {
     display: inline;
     text-align: center;
-}#menu ul li {
+}
+
+#menu ul li {
         text-decoration: none;
-        font-size: 20px;
+        font-size: 16px;
         display: inline;
         text-align: center;
 
@@ -32,7 +40,9 @@ header{
     padding-top: 20px;
     padding-bottom: 20px;
 
-}#menu li a:hover{
+}
+
+#menu li a:hover{
     background:black ;
     color:white;
     padding-left:30px;
@@ -41,27 +51,18 @@ header{
     padding-bottom: 20px;
 }
 
-#boton_registro {
+.action-button {
     border: none;
     border-radius: 1cm;
-    color: rgb(8, 8, 8);
-    padding: 7px 15px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px 5px;
-    cursor: pointer;
-    background-color: aquamarine;
-    }
-    .home {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    .in-flex {
-        flex: 1;
-        min-width: 250px;
+      color: rgb(8, 8, 8);
+      padding: 7px 15px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px 5px;
+      cursor: pointer;
+      background-color: rgb(111, 224, 200);
     }
 
     .input-container {
@@ -70,9 +71,29 @@ header{
         justify-content: space-between;
         margin-bottom: 8px;
         font-size: 16px;
+        
+    }
+
+    .input-container label {
+        font-weight: 700;
     }
 
     .form-container {
         width: 50%;
         margin: 0 auto;
+        background-color: #e5e9e6;
+        padding: 2rem;
+    }
+
+    .buttons-wrapper {
+        float: right;
+    }
+
+    .title-container {
+        margin-top: 5rem;
+        text-align: center;
+    }
+
+    .button-container {
+        text-align: center;
     }
