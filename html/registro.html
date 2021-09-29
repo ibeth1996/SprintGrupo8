@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Salud&Belleza</title>
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="./../css/estilos.css">
 
 </head>
 
@@ -34,34 +34,37 @@
 <div id="formulario" class="form-container">
     <div class="input-container">
         <label> Nombre completo:  </label>
-        <input type="text" id="campoNombre">
+        <input type="text" id="campoNombre" placeholder="Ingrese nombre completo">
     </div>
     
     <div class="input-container">
         <label> Contraseña:  </label>
-        <input type="password" id="campoContrasena">
+        <input type="password" id="campoContrasena" placeholder="Ingrese la contraseña"
+        onchange="validar_contrasena_usuario(event.target.value)">
     </div>
 
     <div class="input-container">
         <label> Correo:  </label>
-        <input type="mail" id="campoCorreo">
+        <input type="mail" id="campoCorreo" placeholder="Ingrese el correo"
+        onchange="validar_correo(event.target.value)">
     </div>
 
     <div class="input-container">
         <label> Confirmación correo:  </label>
-        <input type="mail" id="campoConfirmacion">
+        <input type="mail" id="campoConfirmacion" placeholder="Confirme el correo">
     </div>
 
     <div class="input-container">
         <label> Teléfono móvil:  </label>
-        <input type="text" id="campoTelefono">
+        <input type="text" id="campoTelefono" placeholder="Ingrese teléfono">
     </div>
     <div class="button-container">
         <button class="action-button">Registrarse</button>
     </div>
 
 </div>
-
+<script src="./../js/form2.js">    
+</script>
 
 </body>
 </html>
