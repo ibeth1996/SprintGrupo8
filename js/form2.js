@@ -20,5 +20,5 @@ function validar_contrasena_usuario(contrasena){
     }
 }
 
-module.exports.validar_correo = validar_correo;
-module.exports.validar_contrasena_usuario = validar_contrasena_usuario;
+//module.exports.validar_correo = validar_correo;
+//module.exports.validar_contrasena_usuario = validar_contrasena_usuario;
