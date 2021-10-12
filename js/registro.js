@@ -8,7 +8,7 @@ function almacenarRegistros(){
         'confirmacioncorreo': document.getElementById('campoConfirmacionCorreo').value,
         'telefono': document.getElementById('campoTelefono').value
     }
-    if (arreglo.length < 5){
+    if (arreglo.length < 30){
         arreglo.push(objecto);
         
         console.log(arreglo);
