@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="registro.html">
+    
   
 
 </head>
@@ -24,7 +26,7 @@
             </div>
             
             <div class="buttons-wrapper">
-                <a href="login.html"> <button id="boton_inicio-sesion" class="action-button"> Iniciar sesión</button></a> 
+                <a href="registro.html"> <button id="boton_inicio-sesion" class="action-button"> Registrarse</button></a> 
             </div>
         </div>
         <div id="menu" class="menu">
@@ -56,63 +58,34 @@
 </header>
 
 <div class="title-container">
-    <h1>Registro</h1>
+    <h1>Login</h1>
 </div>
 <div id="formulario" class="form-container">
     <div class="input-container">
-        <label> Nombre completo:  </label>
-        <input type="text" id="campoNombre" placeholder="Ingrese nombre completo">
+        <label> Correo:  </label>
+        <input type="mail" id="campoUsuarioCorreo" placeholder="Ingrese el correo">
     </div>
     
     <div class="input-container">
         <label> Contraseña:  </label>
-        <input type="password" id="campoContrasena" placeholder="Ingrese la contraseña"
-        onchange="validar_contrasena_usuario(event.target.value)">
+        <input type="password" id="campoUsuarioContrasena" placeholder="Contraseña">
     </div>
-
-    <div class="input-container">
-        <label> Correo:  </label>
-        <input type="mail" id="campoCorreo" placeholder="Ingrese el correo"
-        onchange="validar_correo(event.target.value)">
-    </div>
-
-    <div class="input-container">
-        <label> Confirmación correo:  </label>
-        <input type="mail" id="campoConfirmacionCorreo" placeholder="Confirme el correo">
-    </div>
-
-    <div class="input-container">
-        <label> Teléfono móvil:  </label>
-        <input type="text" id="campoTelefono" placeholder="Ingrese teléfono">
-    </div>
-    <div class="button-container">
-        <button class="action-button" onclick="almacenarRegistros()">Registrarse</button>
-    </div>
-
+    
 </div>
-
-<footer id="contacto">
-    <div class="contenedor footer-content">
-        <div class="contact-us">
-            <h2 class="brand">Artemisa Evolution</h2>
-            <p>Salud & Belleza</p>
-        </div>
-        <div class="social-media">
-            <a href="./" class="social-media-icon">
-                <i class='bx bxl-facebook'></i>
-            </a>
-            <a href="./" class="social-media-icon">
-                <i class='bx bxl-twitter' ></i>
-            </a>
-            <a href="./" class="social-media-icon">
-                <i class='bx bxl-instagram' ></i>
-            </a>
-        </div>
+    <div class="button-container">
+        <button type="submit" id="#button_login" onclick="verificarInicioSesion()">Iniciar Sesión</button>
     </div>
-    <div class="line"></div>
-</footer>
-<script src="./../js/form2.js"></script>
-<script src="./../js/registro.js"></script>
+    
+    <div>
+        <label>Cuanto es 33x43</label>
+        <input typy="number" id="enviarRespuesta">
+        <button type="submit" onclick="verificarCaptcha()" >Enviar</button>
+    </div>
+    
+
+
+<script src="../js/funcionesInicioSesion1.js"></script>
+
 
 </body>
 </html>
