@@ -1,51 +1,57 @@
-let arreglo=[
-    {
-        "correo":"yonier@gmail.com",
-        "contrasena": "Y123456"
-    },
-    {
-        "correo":"yonii@gmail.com",
-        "contrasena": "L123456"
-    },
-    {
-        "correo":"leudoi@gmail.com",
-        "contrasena": "Leudo123456"
+let arreglo = []
+
+function almacenarRegistros(){
+    let objecto = {
+        'nombre': document.getElementById('campoNombre').value,
+        'contrasena': document.getElementById('campoContrasena').value,
+        'correo': document.getElementById('campoCorreo').value,
+        'confirmacioncorreo': document.getElementById('campoConfirmacionCorreo').value,
+        'telefono': document.getElementById('campoTelefono').value
     }
-]
+    if (arreglo.length < 30){
+        arreglo.push(objecto);
+        
+        console.log(arreglo);
+    }else{
+        alert("Arreglo lleno");
+        ordenarRegistros(arreglo);
+        
+    }
+}
 
 function verificarInicioSesion(correo, contrasena) {
-    console.log("Funcionando");
     var correo = document.getElementById("campoUsuarioCorreo").value
     var contrasena = document.getElementById("campoUsuarioContrasena").value
-    console.log(correo, contrasena);
     var validador = "";
     for (let i = 0; i < arreglo.length; i++) {
         const element = arreglo[i];
         if (element.correo == correo  && element.contrasena == contrasena ) {
-            validador = "Ingreso exitoso";
+            validador = prompt("¿Cuanto es 33x43?");
+            if(validador != null){
+                verificarCaptcha(validador)
+            }
             break;
         }
         else{
-            validador = "Correo ó contraseña no existe";
+            alert("Correo ó contraseña no existe");
         }
         
     }
-    alert (validador);
+   
     
     
 }
 
 function verificarCaptcha(respuesta) {
-    var respuesta = document.getElementById("enviarRespuesta").value
     if (respuesta == 1419) {
         alert("Respuesta Correcta")
     }
     else{
         alert("Respuesta incorrecta")
-    }
-    
+    }   
 }
 
-//module.exports.arreglo = arreglo;
-//module.exports.verificarInicioSesion= verificarInicioSesion;
-//module.exports.verificarCaptcha = verificarCaptcha;
+module.exports.arreglo = arreglo;
+module.exports.almacenarRegistros = almacenarRegistros;
+module.exports.verificarInicioSesion= verificarInicioSesion;
+module.exports.verificarCaptcha = verificarCaptcha;
