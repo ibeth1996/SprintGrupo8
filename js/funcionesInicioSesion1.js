@@ -30,11 +30,13 @@ function verificarInicioSesion(correo, contrasena) {
             if(validador != null){
                 verificarCaptcha(validador)
             }
-            break;
+            return true;
         }
         else{
             alert("Correo ó contraseña no existe");
+            return false;
         }
+        
         
     }
    
@@ -45,9 +47,11 @@ function verificarInicioSesion(correo, contrasena) {
 function verificarCaptcha(respuesta) {
     if (respuesta == 1419) {
         alert("Respuesta Correcta")
+        return true;
     }
     else{
         alert("Respuesta incorrecta")
+        return false;
     }   
 }
 
